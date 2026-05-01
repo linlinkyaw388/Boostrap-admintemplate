@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+
+    /* hue saturation lightness alpha */
+    --primary-color:hsla(203,100%,13%,1);
+    --secondary-color:hsl(330,87%,17%);
+    --fruit-color:tomato;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    background-color: #f4f4f4;
+    font-size: 12px;
+
+    /* 0 setting ဘယ်ညာအကပ် */
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* start site setting */
+.sitesettings{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    opacity: 0.7;
+
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+
+    text-align: center;
+    line-height: 30px;
+
+    z-index: 3;
+}
+
+.sitesettings:hover{
+    opacity: 1;
+}
+
+.ani-rotates{
+    animation-name: myanirotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes myanirotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* end site setting */
+
+
+/* start right navbar */
+.right-panels{
+    width: 200px;
+    height: 80vh;
+    background-color: #999;
+
+    position: absolute;
+    right: 0;
+    top: 70px;
+
+    padding: 10px;
+
+    z-index: 5;
+
+    display: none;
+
+    transition: display .3 ease-in;
+}
+
+.right-panels h6{
+    background-color: steelblue;
+    color: #fff;
+
+    padding: 10px;
+}
+
+.right-panels .themecolors{
+    /* height: ကို အသေ min max မပါဘဲတပ်ဆင်ထားဖို့လို။; */
+    column-count: 5;
+}
+
+body.show-nav > .right-panels{
+    display: block;
+}
+/* end right navbar */
+
+
+
+ /* start navbar */
+
+  /* start lefts side bar */
+.leftsidebars{
+    background-color: #000;
+}
+
+.nav-item.nav-categories{
+    color: #fff;
+    opacity: .9;
+
+    margin: 10px 0;
+}
+
+.nav-item .sidebarlinks{
+    opacity: .9s;
+
+    position: relative;
+}
+
+.nav-item .sidebarlinks:hover{
+    opacity: 1;
+    background-color: #666;
+}
+
+.nav-item .sidebarlinks .mores{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.sidebarlinks.currents{
+    background-color: #333;
+    box-shadow: 1px 0 5px #222;
+}
+   /* end lefts side bar */
+
+    /* start notify & user account  */
+.dropdowns{
+    position: relative;
+}
+
+.dropdowns .dropdown-contents{
+    min-width: 230px;
+    background-color: #f6f6f6;
+
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: none;
+}
+
+.dropdowns .dropdown.contents a{
+    color: #000;
+    display: block;
+
+    padding: 10px;
+}
+
+.dropdowns .dropdown-contents a:hover{
+    background-color: #ddd;
+}
+
+.dropdowns .dropdown-contents.show{
+    display: block;
+}
+
+.navbar .close-btns{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    line-height: 22px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    margin-right: 3px;
+
+    display: none;
+}
+
+@media (max-width:768px){
+    .navbar .close-btns{
+        display: block;
+    }
+}
+     /* end notify & user account  */
+
+  /* end navbar */
+
+
+  /* start content area */
+
+  /* start shortcut area  */
+  .border-left-primarys{
+    border-left-width: 3px;
+    border-left-color: steelblue;
+  }
+
+  .border-left-successes{
+    border-left-width: 3px;
+    border-left-color: green;
+  }
+
+  .border-left-infos{
+    border-left-width: 3px;
+    border-left-color: skyblue;
+  }
+
+  .border-left-warnings{
+    border-left-width: 3px;
+    border-left-color: orange;
+  }
+  /* end shortcut area  */
+
+  /* end content area */
